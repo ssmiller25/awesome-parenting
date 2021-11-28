@@ -6,4 +6,8 @@ RUN mkdir /workdir
 WORKDIR /workdir
 
 RUN npm install -g yo generator-awesome-list
+
+#RUN useradd -ms /bin/bash user
+#USER user
+
 ENTRYPOINT yo awesome-list
