@@ -1,0 +1,9 @@
+# PURELY to get the awesomelit generator working.  Didn't work cleanly from an Ubuntu 20.04 system
+
+FROM node:17.1.0
+
+RUN mkdir /workdir
+WORKDIR /workdir
+
+RUN npm install -g yo generator-awesome-list
+ENTRYPOINT yo awesome-list
