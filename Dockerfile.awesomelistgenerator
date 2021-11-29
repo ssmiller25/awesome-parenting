@@ -5,9 +5,16 @@ FROM node:17.1.0
 RUN mkdir /workdir
 WORKDIR /workdir
 
+RUN useradd -ms /bin/bash user
+USER user
+
+RUN mkdir /home/user/.npm-global && \
+  npm config set prefix '~/.npm-global'
+
 RUN npm install -g yo generator-awesome-list
 
-#RUN useradd -ms /bin/bash user
-#USER user
+ENV NPM_CONFIG_PREFIX=/home/user/.npm-global
+ENV PATH="/home/user/.npm-global/bin:${PATH}"
+ENV HOME="/workdir"
 
-ENTRYPOINT yo awesome-list
+ENTRYPOINT /home/user/.npm-global/bin/yo --no-insight --skip-install awesome-list

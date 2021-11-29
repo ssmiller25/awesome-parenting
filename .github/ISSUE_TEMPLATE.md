@@ -16,12 +16,9 @@ Use the commands below to provide key information from your environment:
 You do NOT have to include this information if this is a FEATURE REQUEST
 -->
 
-**- Do you want to request a *feature* or report a *bug*?**
+**- What is the primary purpose of this issue**
 
-**- What is the current behavior?**
+- [ ] Content Update (add/update/remove)
+- [ ] Technical Update
 
-**- If the current behavior is a bug, please provide the steps to reproduce.**
-
-**- What is the expected behavior?**
-
-**- Please mention your node.js, NPM, Hugo and operating system version.**
+**- Detail of the issue**
